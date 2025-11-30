@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Trader - فوركس وخيارات ثنائية</title>
+    <style>
+        body{margin:0;font-family:Arial;background:#000;color:#fff}
+        header{background:#00112c;padding:20px;text-align:center;position:sticky;top:0}
+        h1{color:#00ff00;margin:10px}
+        nav a{color:#00ff00;margin:15px;text-decoration:none;font-weight:bold}
+        .hero{background:linear-gradient(#0009,#00112c),url('https://i.imgur.com/2KvT9pB.jpg') center/cover;padding:120px 20px;text-align:center}
+        .hero img{width:160px;height:160px;border-radius:50%;border:5px solid #00ff00;margin:20px 0}
+        .btn{background:#25D366;color:#fff;padding:15px 40px;border-radius:50px;text-decoration:none;font-size:20px}
+        .section{padding:60px 20px;max-width:1200px;margin:auto}
+        .lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
+        .card{background:#111;padding:25px;border-radius:15px;border:2px solid #00ff00;text-align:center}
+        .lang{position:fixed;top:15px;left:15px;background:#000;padding:10px;border-radius:10px;z-index:100}
+        .lang a{margin:5px;color:#fff;text-decoration:none}
+    </style>
+</head>
+<body>
+    <div class="lang">
+        <a href="#" onclick="setLang('en')">EN</a> |
+        <a href="#" onclick="setLang('ru')">RU</a> |
+        <a href="#" onclick="setLang('ar')" style="color:#00ff00">AR</a>
+    </div>
+
+    <header>
+        <h1>Ali Trader</h1>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#lessons">الدروس</a>
+            <a href="#about">من أنا</a>
+            <a href="#contact">تواصل</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="https://i.imgur.com/2KvT9pB.jpg" alt="Ali Trader">
+        <h1>مصدرك الموثوق لاحتراف التداول</h1>
+        <p style="font-size:18px">شموع يابانية • سيولة • Order Blocks • دعوم ومقاومة • SMC</p>
+        <a href="https://wa.me/380XXXXXXXXX" class="btn">ابدأ الآن على الواتساب</a>
+    </div>
+
+    <div class="section">
+        <h2 style="text-align:center;color:#00ff00">الدروس التعليمية</h2>
+        <div class="lessons">
+            <div class="card">
+                <h3>الشموع اليابانية</h3>
+                <p>تكوين الشمعة + أقوى 15 نموذج (Doji, Hammer, Engulfing...)</p>
+            </div>
+            <div class="card">
+                <h3>السيولة و Order Blocks</h3>
+                <p>كيف يصطاد الماركت ميكر السيولة + كيف تحدد OB و FVG</p>
+            </div>
+            <div class="card">
+                <h3>الدعوم والمقاومة</h3>
+                <p>ثابتة وديناميكية + BOS و CHOCH و Imbalance</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setLang(l){
+            document.documentElement.lang = l;
+            document.documentElement.dir = l==='ar'?'rtl':'ltr';
+        }
+    </script>
+</body>
+</html>
