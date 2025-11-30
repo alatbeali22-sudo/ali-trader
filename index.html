@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Trader - Forex & Binary Options Professional</title>
+    <title>Ali Trader - Forex & Binary Options Master</title>
     <style>
-        :root{--green:#00ff00;--dark:#000;--card:#111}
-        body{margin:0;font-family:Arial;background:var(--dark);color:#fff;line-height:1.6}
-        header{background:#00112c;padding:15px;position:sticky;top:0;z-index:100}
-        nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto;flex-wrap:wrap}
-        .logo{font-size:26px;color:var(--green);font-weight:bold}
-        nav a{color:#fff;text-decoration:none;margin:0 10px;font-weight:bold}
-        .lang a{background:#222;padding:8px 15px;border-radius:8px;margin:5px;text-decoration:none}
-        .lang a.active{background:var(--green);color:#000}
-        .hero{background:linear-gradient(#000c,#00112c),url('https://i.imgur.com/9vN8mK2.jpg') center/cover no-repeat;padding:140px 20px;text-align:center}
-        .hero img{width:180px;height:180px;border-radius:50%;border:6px solid var(--green);margin:20px 0}
-        .btn-wa{background:#25D366;color:#fff;padding:18px 45px;border-radius:50px;text-decoration:none;font-size:21px;display:inline-block;margin:20px;font-weight:bold}
-        .section{padding:70px 20px;max-width:1200px;margin:auto}
-        .lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px;margin-top:40px}
-        .card{background:var(--card);padding:30px;border-radius:18px;border:2px solid var(--green);cursor:pointer;transition:0.4s}
-        .card:hover{transform:scale(1.05);box-shadow:0 0 30px rgba(0,255,0,0.4)}
-        .details{display:none;background:#222;padding:25px;border-radius:12px;margin-top:20px}
-        .details img{width:100%;border-radius:12px;margin:15px 0}
-        footer{text-align:center;padding:40px;background:#000;color:#888}
-        @media(max-width:768px){nav{flex-direction:column;gap:15px} .hero{padding:100px 10px}}
+        :root { --green: #00ff00; --dark: #000; --card: #111; }
+        body { margin:0; font-family:Arial, sans-serif; background:var(--dark); color:#fff; line-height:1.6; }
+        header { background:#00112c; padding:15px; position:sticky; top:0; z-index:100; box-shadow:0 2px 10px rgba(0,255,0,0.3); }
+        nav { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto; flex-wrap:wrap; }
+        .logo { font-size:24px; color:var(--green); font-weight:bold; }
+        nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
+        .lang a { background:#222; padding:8px 12px; border-radius:5px; margin:0 5px; text-decoration:none; cursor:pointer; }
+        .lang a.active { background:var(--green); color:#000; }
+        .hero { background:linear-gradient(#0009,#00112c), url('https://i.imgur.com/9vN8mK2.jpg') center/cover no-repeat; padding:120px 20px; text-align:center; }
+        .hero img { width:180px; height:180px; border-radius:50%; border:6px solid var(--green); margin:20px 0; }
+        .btn-wa { background:#25D366; color:#fff; padding:18px 40px; border-radius:50px; text-decoration:none; font-size:20px; display:inline-block; margin:20px; font-weight:bold; }
+        .section { padding:60px 20px; max-width:1200px; margin:auto; }
+        .lessons { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:25px; margin-top:30px; }
+        .card { background:var(--card); padding:25px; border-radius:15px; border:2px solid var(--green); cursor:pointer; transition:0.3s; }
+        .card:hover { transform:translateY(-10px); box-shadow:0 10px 20px rgba(0,255,0,0.2); }
+        .details { display:none; background:#222; padding:20px; border-radius:10px; margin-top:15px; }
+        .details img { width:100%; border-radius:10px; margin:15px 0; }
+        footer { text-align:center; padding:30px; background:#000; color:#888; }
+        @media (max-width:768px) { nav { flex-direction:column; gap:15px; } .hero { padding:80px 10px; } }
     </style>
 </head>
 <body>
 
 <header>
     <nav>
-        <div class="logo">Ali Trader</div>
+        <div class="logo">🅰️ Ali Trader</div>
         <div>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -39,96 +39,198 @@
             <a href="#contact">Contact</a>
         </div>
         <div class="lang">
-            <a onclick="setLang('en')" class="active">EN</a>
-            <a onclick="setLang('ru')">RU</a>
-            <a onclick="setLang('ar')">AR</a>
+            <a onclick="setLang('en')" class="active" id="en-btn">EN</a>
+            <a onclick="setLang('ru')" id="ru-btn">RU</a>
+            <a onclick="setLang('ar')" id="ar-btn">AR</a>
         </div>
     </nav>
 </header>
 
 <section id="home" class="hero">
-    <img src="https://i.imgur.com/9vN8mK2.jpg" alt="Ali Trader">
-    <h1>Professional Forex & Binary Options Trader</h1>
-    <p style="font-size:20px">SMC • Liquidity • Order Blocks • Japanese Candlesticks • 85%+ Win Rate</p>
-    <a href="https://wa.me/380XXXXXXXXX" class="btn-wa">Start Learning on WhatsApp</a>
+    <img src="https://i.imgur.com/9vN8mK2.jpg" alt="Ali Trader Profile">
+    <h1 id="hero-title">Your Trusted Source for Global Trading Solutions</h1>
+    <p id="hero-desc" style="font-size:20px">Master Forex & Binary Options • 85%+ Win Rate • 5+ Years Experience</p>
+    <a href="https://wa.me/380XXXXXXXXX" class="btn-wa" id="wa-btn">Start Trading Now</a>
 </section>
 
 <section id="about" class="section">
-    <h2 style="text-align:center;color:var(--green)">About Me</h2>
-    <p style="font-size:18px;text-align:center">My name is Ali. I have been trading Forex and Binary Options professionally for over 5 years. I teach Smart Money Concepts (SMC) and price action with real results.</p>
+    <h2 id="about-title" style="text-align:center;color:var(--green)">About Ali Trader</h2>
+    <p id="about-desc" style="font-size:18px;text-align:center">With 5+ years in Forex and Binary Options, I help traders worldwide achieve consistent profits using Smart Money Concepts (SMC) and Price Action.</p>
 </section>
 
 <section id="lessons" class="section">
-    <h2 style="text-align:center;color:var(--green)">Free Trading Lessons</h2>
+    <h2 id="lessons-title" style="text-align:center;color:var(--green)">Trading Lessons</h2>
     <div class="lessons">
-
         <div class="card" onclick="toggle('c1')">
-            <h3>Japanese Candlesticks – 15 Strongest Patterns</h3>
+            <h3 id="l1-title">Japanese Candlesticks – 15 Strongest Patterns</h3>
             <div id="c1" class="details">
-                <p><strong>Candle anatomy:</strong> Open – High – Low – Close</p>
-                <p><strong>Bullish:</strong> Hammer · Inverted Hammer · Bullish Engulfing · Morning Star · Three White Soldiers · Dragonfly Doji</p>
-                <p><strong>Bearish:</strong> Shooting Star · Hanging Man · Bearish Engulfing · Evening Star · Three Black Crows · Gravestone Doji</p>
-                <img src="https://i.imgur.com/Wz3F7kP.png" alt="Candlestick Patterns">
+                <p id="l1-desc"><strong>Candle Formation:</strong> Open – High – Low – Close. Green = Bullish, Red = Bearish.</p>
+                <p id="l1-patterns"><strong>Bullish:</strong> Hammer, Inverted Hammer, Bullish Engulfing, Morning Star, Three White Soldiers, Dragonfly Doji.</p>
+                <p id="l1-bearish"><strong>Bearish:</strong> Shooting Star, Hanging Man, Bearish Engulfing, Evening Star, Three Black Crows, Gravestone Doji.</p>
+                <img src="https://i.imgur.com/3v7m8z4.png" alt="Candlestick Patterns" loading="lazy">
             </div>
         </div>
 
         <div class="card" onclick="toggle('c2')">
-            <h3>Liquidity Pools & Stop Hunts</h3>
+            <h3 id="l2-title">Liquidity & Order Blocks</h3>
             <div id="c2" class="details">
-                <p>Market makers collect liquidity above old highs and below old lows before the real move. Always wait for confirmation after stop hunt.</p>
-                <img src="https://i.imgur.com/Xk9Lm2s.png" alt="Liquidity Example">
+                <p id="l2-desc">Liquidity grabs by market makers. Order Blocks (OB): Last opposite candle before impulse. Use with SMC for entries.</p>
+                <img src="https://i.imgur.com/4p9q1r5.png" alt="Liquidity & OB" loading="lazy">
             </div>
         </div>
 
         <div class="card" onclick="toggle('c3')">
-            <h3>Order Blocks · FVG · Imbalance</h3>
+            <h3 id="l3-title">Support/Resistance + BOS + CHOCH</h3>
             <div id="c3" class="details">
-                <p>Order Block = last opposite candle before strong impulse</p>
-                <p>Fair Value Gap = 3-candle inefficiency zone</p>
-                <p>Imbalance = price skipped area → will be filled later</p>
-                <img src="https://i.imgur.com/8YvPqR3.png" alt="OB + FVG">
+                <p id="l3-desc">Static levels (horizontal) + Dynamic (trendlines). BOS = Break of Structure (continuation). CHOCH = Change of Character (reversal).</p>
+                <img src="https://i.imgur.com/5s2t3u6.png" alt="S/R + BOS" loading="lazy">
             </div>
         </div>
 
         <div class="card" onclick="toggle('c4')">
-            <h3>BOS · CHOCH · Support & Resistance</h3>
+            <h3 id="l4-title">FVG & Imbalance</h3>
             <div id="c4" class="details">
-                <p>BOS = Break of Structure → trend continuation</p>
-                <p>CHOCH = Change of Character → reversal</p>
-                <p>Best entries at Order Block + BOS confirmation</p>
+                <p id="l4-desc">Fair Value Gap: 3-candle imbalance zone to be filled. Imbalance: Price skipped areas for future retracement.</p>
+                <img src="https://i.imgur.com/6v7w8x9.png" alt="FVG Imbalance" loading="lazy">
             </div>
         </div>
-
     </div>
 </section>
 
 <section id="portfolio" class="section">
-    <h2 style="text-align:center;color:var(--green)">Real Results</h2>
-    <p style="text-align:center;font-size:22px">+500 pips this week · Verified trades · 87% win rate</p>
-    <img src="https://i.imgur.com/example-profit2.jpg" alt="Profit" style="width:100%;max-width:700px;border-radius:20px;margin:30px auto;display:block">
+    <h2 id="portfolio-title" style="text-align:center;color:var(--green)">Portfolio & Results</h2>
+    <p id="portfolio-desc" style="text-align:center;font-size:20px">+200 pips on EUR/USD • 85% success rate • Real verified trades</p>
+    <img src="https://i.imgur.com/7y8z9a0.png" alt="Profit Screenshot" style="width:100%;max-width:600px;border-radius:15px;margin:20px auto;display:block">
 </section>
 
 <section id="contact" class="section">
-    <h2 style="text-align:center;color:var(--green)">Contact Me Now</h2>
-    <p style="text-align:center;font-size:20px">
-        WhatsApp: <a href="https://wa.me/380XXXXXXXXX" style="color:#25D366">Click here</a><br><br>
-        Telegram: @ali_trader_pro
-    </p>
+    <h2 id="contact-title" style="text-align:center;color:var(--green)">Contact Us</h2>
+    <p id="contact-desc" style="text-align:center;font-size:18px">Ready to start? Message me now!</p>
+    <a href="https://wa.me/380XXXXXXXXX" class="btn-wa" id="contact-wa">WhatsApp Chat</a>
+    <p id="contact-telegram" style="text-align:center;margin-top:20px">Telegram: @ali_trader_pro</p>
 </section>
 
-<footer>© 2025 Ali Trader • Professional Forex Education</footer>
+<footer id="footer">© 2025 Ali Trader. All Rights Reserved.</footer>
 
 <script>
-function toggle(id){
+const translations = {
+    en: {
+        heroTitle: 'Your Trusted Source for Global Trading Solutions',
+        heroDesc: 'Master Forex & Binary Options • 85%+ Win Rate • 5+ Years Experience',
+        waBtn: 'Start Trading Now',
+        aboutTitle: 'About Ali Trader',
+        aboutDesc: 'With 5+ years in Forex and Binary Options, I help traders worldwide achieve consistent profits using Smart Money Concepts (SMC) and Price Action.',
+        lessonsTitle: 'Trading Lessons',
+        l1Title: 'Japanese Candlesticks – 15 Strongest Patterns',
+        l1Desc: '<strong>Candle Formation:</strong> Open – High – Low – Close. Green = Bullish, Red = Bearish.',
+        l1Patterns: '<strong>Bullish:</strong> Hammer, Inverted Hammer, Bullish Engulfing, Morning Star, Three White Soldiers, Dragonfly Doji.',
+        l1Bearish: '<strong>Bearish:</strong> Shooting Star, Hanging Man, Bearish Engulfing, Evening Star, Three Black Crows, Gravestone Doji.',
+        l2Title: 'Liquidity & Order Blocks',
+        l2Desc: 'Liquidity grabs by market makers. Order Blocks (OB): Last opposite candle before impulse. Use with SMC for entries.',
+        l3Title: 'Support/Resistance + BOS + CHOCH',
+        l3Desc: 'Static levels (horizontal) + Dynamic (trendlines). BOS = Break of Structure (continuation). CHOCH = Change of Character (reversal).',
+        l4Title: 'FVG & Imbalance',
+        l4Desc: 'Fair Value Gap: 3-candle imbalance zone to be filled. Imbalance: Price skipped areas for future retracement.',
+        portfolioTitle: 'Portfolio & Results',
+        portfolioDesc: '+200 pips on EUR/USD • 85% success rate • Real verified trades',
+        contactTitle: 'Contact Us',
+        contactDesc: 'Ready to start? Message me now!',
+        contactWa: 'WhatsApp Chat',
+        contactTelegram: 'Telegram: @ali_trader_pro',
+        footer: '© 2025 Ali Trader. All Rights Reserved.'
+    },
+    ru: {
+        heroTitle: 'Ваш надежный источник глобальных торговых решений',
+        heroDesc: 'Освойте Forex и Binary Options • 85%+ коэффициент успеха • 5+ лет опыта',
+        waBtn: 'Начать торговлю сейчас',
+        aboutTitle: 'О Али Трейдере',
+        aboutDesc: 'Более 5 лет в Forex и Binary Options, помогаю трейдерам по всему миру достигать стабильной прибыли с помощью Smart Money Concepts (SMC) и Price Action.',
+        lessonsTitle: 'Уроки трейдинга',
+        l1Title: 'Японские свечи – 15 сильнейших паттернов',
+        l1Desc: '<strong>Формирование свечи:</strong> Открытие – Максимум – Минимум – Закрытие. Зеленая = Бычья, Красная = Медвежья.',
+        l1Patterns: '<strong>Бычьи:</strong> Молот, Перевернутый молот, Бычье поглощение, Утренняя звезда, Три белых солдата, Стрекоза Доджи.',
+        l1Bearish: '<strong>Медвежьи:</strong> Падающая звезда, Вешалка, Медвежье поглощение, Вечерняя звезда, Три черных вороны, Надгробная Доджи.',
+        l2Title: 'Ликвидность и Order Blocks',
+        l2Desc: 'Захваты ликвидности маркет-мейкерами. Order Blocks (OB): Последняя противоположная свеча перед импульсом. Используйте с SMC для входов.',
+        l3Title: 'Поддержка/Сопротивление + BOS + CHOCH',
+        l3Desc: 'Статические уровни (горизонтальные) + Динамические (линии тренда). BOS = Прорыв структуры (продолжение). CHOCH = Смена характера (разворот).',
+        l4Title: 'FVG и Imbalance',
+        l4Desc: 'Fair Value Gap: Зона неэффективности из 3 свечей, которую заполнят. Imbalance: Пропущенные области цены для будущего возврата.',
+        portfolioTitle: 'Портфолио и результаты',
+        portfolioDesc: '+200 пипсов на EUR/USD • 85% коэффициент успеха • Реальные верифицированные сделки',
+        contactTitle: 'Связаться с нами',
+        contactDesc: 'Готовы начать? Напишите мне сейчас!',
+        contactWa: 'Чат в WhatsApp',
+        contactTelegram: 'Telegram: @ali_trader_pro',
+        footer: '© 2025 Ali Trader. Все права защищены.'
+    },
+    ar: {
+        heroTitle: 'مصدرك الموثوق لحلول التداول العالمية',
+        heroDesc: 'أتقن الفوركس والخيارات الثنائية • 85%+ معدل الربح • 5+ سنوات خبرة',
+        waBtn: 'ابدأ التداول الآن',
+        aboutTitle: 'عن علي تريدر',
+        aboutDesc: 'مع أكثر من 5 سنوات في الفوركس والخيارات الثنائية، أساعد المتداولين في جميع أنحاء العالم على تحقيق أرباح مستقرة باستخدام مفاهيم المال الذكي (SMC) وتحليل الحركة السعرية.',
+        lessonsTitle: 'دروس التداول',
+        l1Title: 'الشموع اليابانية – 15 نموذجًا أقوى',
+        l1Desc: '<strong>تكوين الشمعة:</strong> الافتتاح – الأعلى – الأدنى – الإغلاق. الأخضر = صعودي، الأحمر = هبوطي.',
+        l1Patterns: '<strong>صعودية:</strong> المطرقة، المطرقة المقلوبة، ابتلاع صعودي، نجمة الصباح، ثلاثة جنود أبيض، دوجي التنين.',
+        l1Bearish: '<strong>هبوطية:</strong> نجمة السقوط، الرجل المشنوق، ابتلاع هبوطي، نجمة المساء، ثلاث غربان سوداء، دوجي القبر.',
+        l2Title: 'السيولة وأوارد بلوك',
+        l2Desc: 'صيد السيولة من قبل صانعي السوق. أوارد بلوك (OB): آخر شمعة معاكسة قبل الاندفاع. استخدم مع SMC للدخول.',
+        l3Title: 'الدعوم/المقاومة + BOS + CHOCH',
+        l3Desc: 'المستويات الثابتة (أفقية) + الديناميكية (خطوط الاتجاه). BOS = كسر الهيكل (استمرار). CHOCH = تغيير الطابع (انعكاس).',
+        l4Title: 'FVG والاختلال',
+        l4Desc: 'فجوة القيمة العادلة: منطقة اختلال من 3 شموع سيتم ملؤها. الاختلال: مناطق سعرية مفوتة للعودة المستقبلية.',
+        portfolioTitle: 'المحفظة والنتائج',
+        portfolioDesc: '+200 نقطة على EUR/USD • 85% معدل النجاح • صفقات حقيقية موثقة',
+        contactTitle: 'تواصل معنا',
+        contactDesc: 'جاهز للبدء؟ أرسل لي رسالة الآن!',
+        contactWa: 'دردشة واتساب',
+        contactTelegram: 'تليجرام: @ali_trader_pro',
+        footer: '© 2025 علي تريدر. جميع الحقوق محفوظة.'
+    }
+};
+
+function toggle(id) {
     const el = document.getElementById(id);
-    el.style.display = el.style.display==='block' ? 'none' : 'block';
+    el.style.display = el.style.display === 'block' ? 'none' : 'block';
 }
-function setLang(l){
-    document.documentElement.lang = l;
-    document.documentElement.dir = l==='ar'?'rtl':'ltr';
-    document.querySelectorAll('.lang a').forEach(a=>a.classList.remove('active'));
-    document.querySelector(`.lang a[onclick="setLang('${l}')"]`).classList.add('active');
+
+function setLang(lang) {
+    const t = translations[lang];
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('.lang a').forEach(a => a.classList.remove('active'));
+    event.target.classList.add('active');
+
+    // Update all texts
+    document.getElementById('hero-title').innerHTML = t.heroTitle;
+    document.getElementById('hero-desc').innerHTML = t.heroDesc;
+    document.getElementById('wa-btn').innerHTML = t.waBtn;
+    document.getElementById('about-title').innerHTML = t.aboutTitle;
+    document.getElementById('about-desc').innerHTML = t.aboutDesc;
+    document.getElementById('lessons-title').innerHTML = t.lessonsTitle;
+    document.getElementById('l1-title').innerHTML = t.l1Title;
+    document.getElementById('l1-desc').innerHTML = t.l1Desc;
+    document.getElementById('l1-patterns').innerHTML = t.l1Patterns;
+    document.getElementById('l1-bearish').innerHTML = t.l1Bearish;
+    document.getElementById('l2-title').innerHTML = t.l2Title;
+    document.getElementById('l2-desc').innerHTML = t.l2Desc;
+    document.getElementById('l3-title').innerHTML = t.l3Title;
+    document.getElementById('l3-desc').innerHTML = t.l3Desc;
+    document.getElementById('l4-title').innerHTML = t.l4Title;
+    document.getElementById('l4-desc').innerHTML = t.l4Desc;
+    document.getElementById('portfolio-title').innerHTML = t.portfolioTitle;
+    document.getElementById('portfolio-desc').innerHTML = t.portfolioDesc;
+    document.getElementById('contact-title').innerHTML = t.contactTitle;
+    document.getElementById('contact-desc').innerHTML = t.contactDesc;
+    document.getElementById('contact-wa').innerHTML = t.contactWa;
+    document.getElementById('contact-telegram').innerHTML = t.contactTelegram;
+    document.getElementById('footer').innerHTML = t.footer;
 }
+
+// Default English
+setLang('en');
 </script>
 </body>
 </html>
