@@ -50,7 +50,7 @@
             <p id="hero-desc">Master Forex & Binary Options with Expert Lessons on Candlesticks, Liquidity, Order Blocks, and More</p>
             <a id="wa-btn" href="https://wa.me/380XXXXXXXXX" class="btn-wa">Start Now on WhatsApp</a>
         </section>
-        <section id="about" class="section">
+        <section id="about">
             <h2 id="about-title">About Ali Trader</h2>
             <p id="about-desc">With 5+ years in Forex and Binary Options, I help traders worldwide achieve 85% win rates through proven strategies like SMC and Price Action.</p>
         </section>
@@ -100,19 +100,13 @@
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-            // Update texts (simple for now, can expand)
+            // Simple text update for demo (expand as needed)
             const texts = {
-                en: { title: 'Ali Trader', hero: 'Your Trusted Source...', desc: 'Master Forex...', about: 'About Ali Trader', lessons: 'Lessons' },
-                ru: { title: 'Али Трейдер', hero: 'Ваш надежный источник...', desc: 'Освойте Forex...', about: 'О Али Трейдере', lessons: 'Уроки' },
-                ar: { title: 'علي تريدر', hero: 'مصدرك الموثوق...', desc: 'أتقن الفوركس...', about: 'عن علي تريدر', lessons: 'الدروس' }
+                en: { hero: 'Your Trusted Source...', desc: 'Master Forex...', about: 'About Ali Trader', lessons: 'Lessons' },
+                ru: { hero: 'Ваш надежный источник...', desc: 'Освойте Forex...', about: 'О Али Трейдере', lessons: 'Уроки' },
+                ar: { hero: 'مصدرك الموثوق...', desc: 'أتقن الفوركس...', about: 'عن علي تريدر', lessons: 'الدروس' }
             };
-            document.querySelector('h1').textContent = texts[lang].title;
-            // Add more updates as needed
-        }
-        function toggleDetails(id) {
-            const el = document.getElementById(id);
-            el.style.display = el.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
-</body>
-</html>
+            // Update titles and descs
+            document.getElementById('hero-title').textContent = texts[lang].hero;
+            document.getElementById('hero-desc').textContent = texts[lang].desc;
+            document.getElementById('about-title').textContent = texts
