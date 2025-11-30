@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Trader - Forex & Binary Options Master</title>
+    <title>Ali Trader - Forex & Binary Options Professional</title>
     <style>
-        :root { --green: #00ff00; --dark: #000; --card: #111; }
-        body {margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--dark);color:#fff;line-height:1.6}
-        header {background:#00112c;padding:15px;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,255,0,0.3)}
-        nav {display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
-        nav a {color:#fff;text-decoration:none;margin:0 15px;font-weight:bold}
-        .logo {font-size:24px;color:var(--green)}
-        .lang a {background:#222;padding:8px 12px;border-radius:5px;margin:0 5px;text-decoration:none}
-        .hero {background:linear-gradient(#0009,#00112c),url('https://i.imgur.com/2KvT9pB.jpg') center/cover;padding:120px 20px;text-align:center}
-        .hero img {width:180px;height:180px;border-radius:50%;border:6px solid var(--green);margin:20px 0}
-        .btn-wa {background:#25D366;color:#fff;padding:18px 40px;border-radius:50px;text-decoration:none;font-size:20px;display:inline-block;margin:20px}
-        .section {padding:60px 20px;max-width:1200px;margin:auto}
-        .lessons {display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;margin-top:30px}
-        .card {background:var(--card);padding:25px;border-radius:15px;border:2px solid var(--green);cursor:pointer;transition:0.3s}
-        .card:hover {transform:translateY(-10px);box-shadow:0 10px 20px rgba(0,255,0,0.2)}
-        .details {display:none;background:#222;padding:20px;border-radius:10px;margin-top:15px}
-        footer {text-align:center;padding:30px;background:#000}
-        @media (max-width:768px) {.hero{padding:80px 10px} nav{flex-direction:column;gap:15px}}
+        :root{--green:#00ff00;--dark:#000;--card:#111}
+        body{margin:0;font-family:Arial;background:var(--dark);color:#fff;line-height:1.6}
+        header{background:#00112c;padding:15px;position:sticky;top:0;z-index:100}
+        nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto;flex-wrap:wrap}
+        .logo{font-size:26px;color:var(--green);font-weight:bold}
+        nav a{color:#fff;text-decoration:none;margin:0 10px;font-weight:bold}
+        .lang a{background:#222;padding:8px 15px;border-radius:8px;margin:5px;text-decoration:none}
+        .lang a.active{background:var(--green);color:#000}
+        .hero{background:linear-gradient(#000c,#00112c),url('https://i.imgur.com/9vN8mK2.jpg') center/cover no-repeat;padding:140px 20px;text-align:center}
+        .hero img{width:180px;height:180px;border-radius:50%;border:6px solid var(--green);margin:20px 0}
+        .btn-wa{background:#25D366;color:#fff;padding:18px 45px;border-radius:50px;text-decoration:none;font-size:21px;display:inline-block;margin:20px;font-weight:bold}
+        .section{padding:70px 20px;max-width:1200px;margin:auto}
+        .lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px;margin-top:40px}
+        .card{background:var(--card);padding:30px;border-radius:18px;border:2px solid var(--green);cursor:pointer;transition:0.4s}
+        .card:hover{transform:scale(1.05);box-shadow:0 0 30px rgba(0,255,0,0.4)}
+        .details{display:none;background:#222;padding:25px;border-radius:12px;margin-top:20px}
+        .details img{width:100%;border-radius:12px;margin:15px 0}
+        footer{text-align:center;padding:40px;background:#000;color:#888}
+        @media(max-width:768px){nav{flex-direction:column;gap:15px} .hero{padding:100px 10px}}
     </style>
 </head>
 <body>
@@ -37,7 +39,7 @@
             <a href="#contact">Contact</a>
         </div>
         <div class="lang">
-            <a onclick="setLang('en')" style="background:var(--green)">EN</a>
+            <a onclick="setLang('en')" class="active">EN</a>
             <a onclick="setLang('ru')">RU</a>
             <a onclick="setLang('ar')">AR</a>
         </div>
@@ -45,55 +47,55 @@
 </header>
 
 <section id="home" class="hero">
-    <img src="https://i.imgur.com/2KvT9pB.jpg" alt="Ali Trader">
-    <h1>Your Trusted Source for Global Trading Solutions</h1>
-    <p>Master Forex & Binary Options • 85%+ Win Rate • 5+ Years Experience</p>
-    <a href="https://wa.me/380XXXXXXXXX" class="btn-wa">Start Now on WhatsApp</a>
+    <img src="https://i.imgur.com/9vN8mK2.jpg" alt="Ali Trader">
+    <h1>Professional Forex & Binary Options Trader</h1>
+    <p style="font-size:20px">SMC • Liquidity • Order Blocks • Japanese Candlesticks • 85%+ Win Rate</p>
+    <a href="https://wa.me/380XXXXXXXXX" class="btn-wa">Start Learning on WhatsApp</a>
 </section>
 
 <section id="about" class="section">
-    <h2 style="text-align:center;color:var(--green)">About Ali Trader</h2>
-    <p style="font-size:18px;text-align:center">Professional trader with over 5 years experience in Forex and Binary Options. Specializing in Smart Money Concepts (SMC), Liquidity, Order Blocks, and Japanese Candlesticks. Helping traders worldwide achieve consistent profits.</p>
+    <h2 style="text-align:center;color:var(--green)">About Me</h2>
+    <p style="font-size:18px;text-align:center">My name is Ali. I have been trading Forex and Binary Options professionally for over 5 years. I teach Smart Money Concepts (SMC) and price action with real results.</p>
 </section>
 
 <section id="lessons" class="section">
-    <h2 style="text-align:center;color:var(--green)">Trading Lessons</h2>
+    <h2 style="text-align:center;color:var(--green)">Free Trading Lessons</h2>
     <div class="lessons">
 
         <div class="card" onclick="toggle('c1')">
             <h3>Japanese Candlesticks – 15 Strongest Patterns</h3>
             <div id="c1" class="details">
-                <p><strong>Candle Formation:</strong> Open → High → Low → Close</p>
-                <p><strong>Bullish Patterns:</strong> Hammer, Inverted Hammer, Bullish Engulfing, Piercing Line, Morning Star, Three White Soldiers, Dragonfly Doji</p>
-                <p><strong>Bearish Patterns:</strong> Shooting Star, Hanging Man, Bearish Engulfing, Dark Cloud Cover, Evening Star, Three Black Crows, Gravestone Doji</p>
-                <img src="https://i.imgur.com/Wz3F7kP.png" style="width:100%;border-radius:10px;margin:15px 0">
+                <p><strong>Candle anatomy:</strong> Open – High – Low – Close</p>
+                <p><strong>Bullish:</strong> Hammer · Inverted Hammer · Bullish Engulfing · Morning Star · Three White Soldiers · Dragonfly Doji</p>
+                <p><strong>Bearish:</strong> Shooting Star · Hanging Man · Bearish Engulfing · Evening Star · Three Black Crows · Gravestone Doji</p>
+                <img src="https://i.imgur.com/Wz3F7kP.png" alt="Candlestick Patterns">
             </div>
         </div>
 
         <div class="card" onclick="toggle('c2')">
-            <h3>Liquidity & Market Maker Traps</h3>
+            <h3>Liquidity Pools & Stop Hunts</h3>
             <div id="c2" class="details">
-                <p>Liquidity pools above old highs / below old lows. Market makers hunt stop-losses before real move. Look for "stop hunts" then reversal.</p>
-                <img src="https://i.imgur.com/Xk9Lm2s.png" style="width:100%;border-radius:10px;margin:15px 0">
+                <p>Market makers collect liquidity above old highs and below old lows before the real move. Always wait for confirmation after stop hunt.</p>
+                <img src="https://i.imgur.com/Xk9Lm2s.png" alt="Liquidity Example">
             </div>
         </div>
 
         <div class="card" onclick="toggle('c3')">
-            <h3>Order Blocks, FVG, Imbalance</h3>
+            <h3>Order Blocks · FVG · Imbalance</h3>
             <div id="c3" class="details">
-                <p><strong>Order Block (OB):</strong> Last opposite candle before strong move</p>
-                <p><strong>Fair Value Gap (FVG):</strong> 3-candle imbalance zone</p>
-                <p><strong>Mitigation Blocks & Breaker Blocks</strong></p>
-                <img src="https://i.imgur.com/8YvPqR3.png" style="width:100%;border-radius:10px;margin:15px 0">
+                <p>Order Block = last opposite candle before strong impulse</p>
+                <p>Fair Value Gap = 3-candle inefficiency zone</p>
+                <p>Imbalance = price skipped area → will be filled later</p>
+                <img src="https://i.imgur.com/8YvPqR3.png" alt="OB + FVG">
             </div>
         </div>
 
         <div class="card" onclick="toggle('c4')">
-            <h3>Support/Resistance + BOS + CHOCH</h3>
+            <h3>BOS · CHOCH · Support & Resistance</h3>
             <div id="c4" class="details">
-                <p>BOS = Break of Structure → trend continuation<br>
-                CHOCH = Change of Character → reversal signal<br>
-                Combine with Order Blocks for high-probability entries.</p>
+                <p>BOS = Break of Structure → trend continuation</p>
+                <p>CHOCH = Change of Character → reversal</p>
+                <p>Best entries at Order Block + BOS confirmation</p>
             </div>
         </div>
 
@@ -102,27 +104,30 @@
 
 <section id="portfolio" class="section">
     <h2 style="text-align:center;color:var(--green)">Real Results</h2>
-    <p style="text-align:center;font-size:20px">+200 pips EUR/USD • 85% win rate • Verified trades</p>
-    <img src="https://i.imgur.com/example-profit.jpg" style="width:100%;max-width:600px;border-radius:15px;margin:20px auto;display:block">
+    <p style="text-align:center;font-size:22px">+500 pips this week · Verified trades · 87% win rate</p>
+    <img src="https://i.imgur.com/example-profit2.jpg" alt="Profit" style="width:100%;max-width:700px;border-radius:20px;margin:30px auto;display:block">
 </section>
 
 <section id="contact" class="section">
-    <h2 style="text-align:center;color:var(--green)">Contact Me</h2>
-    <p style="text-align:center">WhatsApp: <a href="https://wa.me/380XXXXXXXXX">Click here</a><br>
-    Telegram: @ali_trader_forex</p>
+    <h2 style="text-align:center;color:var(--green)">Contact Me Now</h2>
+    <p style="text-align:center;font-size:20px">
+        WhatsApp: <a href="https://wa.me/380XXXXXXXXX" style="color:#25D366">Click here</a><br><br>
+        Telegram: @ali_trader_pro
+    </p>
 </section>
 
-<footer>© 2025 Ali Trader • All Rights Reserved</footer>
+<footer>© 2025 Ali Trader • Professional Forex Education</footer>
 
 <script>
-function toggle(id) {
+function toggle(id){
     const el = document.getElementById(id);
     el.style.display = el.style.display==='block' ? 'none' : 'block';
 }
-function setLang(l) {
+function setLang(l){
     document.documentElement.lang = l;
     document.documentElement.dir = l==='ar'?'rtl':'ltr';
-    if(l==='ar') document.querySelectorAll('[dir]').forEach(e=>e.dir='rtl');
+    document.querySelectorAll('.lang a').forEach(a=>a.classList.remove('active'));
+    document.querySelector(`.lang a[onclick="setLang('${l}')"]`).classList.add('active');
 }
 </script>
 </body>
