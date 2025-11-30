@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Trader - Forex & Binary Options</title>
     <style>
-        body { font-family: Arial; background: #000; color: #fff; margin: 0; padding: 0; }
-        header { background: #001f3f; padding: 10px; display: flex; justify-content: space-between; align-items: center; }
-        nav ul { list-style: none; display: flex; gap: 20px; }
-        nav a { color: #fff; text-decoration: none; }
+        body { font-family: Arial; background: #000; color: #fff; margin: 0; padding: 0; line-height: 1.6; }
+        header { background: #001f3f; padding: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; }
         .lang-selector { display: flex; gap: 10px; }
-        .lang-btn { background: #007bff; color: #fff; border: none; padding: 5px 10px; cursor: pointer; }
-        main { padding: 20px; text-align: center; }
-        .hero { background: url('https://via.placeholder.com/1200x600/001f3f/00ff00?text=A+Trading+Chart') center/cover; height: 400px; display: flex; align-items: center; justify-content: center; }
+        .lang-btn { background: #007bff; color: #fff; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .lang-btn.active { background: #00ff00; color: #000; }
+        main { padding: 20px; max-width: 1200px; margin: auto; }
+        .hero { text-align: center; padding: 50px 20px; background: #001f3f; border-radius: 10px; margin-bottom: 40px; }
+        .hero img { width: 200px; height: 200px; border-radius: 50%; border: 4px solid #00ff00; margin: 20px 0; }
+        .btn-wa { background: #25D366; color: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 20px; }
         .lessons { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
-        .lesson { background: #111; padding: 15px; border-radius: 8px; }
-        img { max-width: 100%; height: auto; }
-        [lang="ar"] { direction: rtl; }
+        .lesson { background: #111; padding: 20px; border-radius: 10px; border: 1px solid #00ff00; cursor: pointer; transition: 0.3s; }
+        .lesson:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,255,0,0.3); }
+        .details { display: none; margin-top: 15px; padding: 15px; background: #222; border-radius: 8px; }
+        .details img { width: 100%; border-radius: 8px; margin: 10px 0; max-height: 300px; object-fit: cover; }
+        .contact { text-align: center; margin-top: 40px; padding: 20px; background: #111; border-radius: 10px; }
+        [lang="ar"] { direction: rtl; text-align: right; }
+        @media (max-width: 768px) { header { flex-direction: column; gap: 10px; } nav ul { flex-direction: column; gap: 10px; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>Ali Trader</h1>
+        <h1 style="margin: 0; color: #00ff00;">Ali Trader</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -31,47 +38,80 @@
             </ul>
         </nav>
         <div class="lang-selector">
-            <button class="lang-btn" onclick="setLang('en')">EN</button>
+            <button class="lang-btn active" onclick="setLang('en')">EN</button>
             <button class="lang-btn" onclick="setLang('ru')">RU</button>
             <button class="lang-btn" onclick="setLang('ar')">AR</button>
         </div>
     </header>
     <main>
         <section id="home" class="hero">
-            <div>
-                <h2>Your Trusted Source for Global Trading Solutions</h2>
-                <img src="https://via.placeholder.com/300x200?text=Ali+Trader+Photo" alt="Ali Trader">
-                <p>Master Forex & Binary Options with Expert Lessons</p>
-                <a href="https://wa.me/380XXXXXXXXX" style="background: #25D366; color: white; padding: 10px 20px; text-decoration: none;">Start Now</a>
-            </div>
+            <img src="https://i.imgur.com/9vN8mK2.jpg" alt="Ali Trader Profile">
+            <h2 id="hero-title">Your Trusted Source for Global Trading Solutions</h2>
+            <p id="hero-desc">Master Forex & Binary Options with Expert Lessons on Candlesticks, Liquidity, Order Blocks, and More</p>
+            <a id="wa-btn" href="https://wa.me/380XXXXXXXXX" class="btn-wa">Start Now on WhatsApp</a>
+        </section>
+        <section id="about" class="section">
+            <h2 id="about-title">About Ali Trader</h2>
+            <p id="about-desc">With 5+ years in Forex and Binary Options, I help traders worldwide achieve 85% win rates through proven strategies like SMC and Price Action.</p>
         </section>
         <section id="lessons" class="lessons">
-            <div class="lesson">
-                <h3>Japanese Candlesticks</h3>
-                <p>Formation: Open, High, Low, Close. Patterns: Doji, Hammer, Engulfing (15 key patterns with examples).</p>
-                <img src="https://via.placeholder.com/300x200?text=Candlesticks" alt="Candlesticks">
+            <div class="lesson" onclick="toggleDetails('c1')">
+                <h3 id="l1-title">Japanese Candlesticks – 15 Strongest Patterns</h3>
+                <div id="c1" class="details">
+                    <p id="l1-desc"><strong>Candle Formation:</strong> Open, High, Low, Close. Green = Bullish, Red = Bearish.</p>
+                    <p id="l1-patterns"><strong>Bullish Patterns:</strong> Hammer, Inverted Hammer, Bullish Engulfing, Morning Star, Three White Soldiers, Dragonfly Doji.</p>
+                    <p id="l1-bearish"><strong>Bearish Patterns:</strong> Shooting Star, Hanging Man, Bearish Engulfing, Evening Star, Three Black Crows, Gravestone Doji.</p>
+                    <img src="https://www.xs.com/wp-content/uploads/2025/11/candlestick-patterns.jpg" alt="Candlestick Patterns" loading="lazy">
+                </div>
             </div>
-            <div class="lesson">
-                <h3>Liquidity & Order Blocks</h3>
-                <p>Liquidity grabs by market makers. Order Blocks (OB): Identify supply/demand zones. Use with SMC for entries.</p>
-                <img src="https://via.placeholder.com/300x200?text=Liquidity" alt="Liquidity">
+            <div class="lesson" onclick="toggleDetails('c2')">
+                <h3 id="l2-title">Liquidity & Order Blocks</h3>
+                <div id="c2" class="details">
+                    <p id="l2-desc">Liquidity grabs by market makers. Order Blocks (OB): Last opposite candle before impulse. Use with SMC for entries.</p>
+                    <img src="https://www.xs.com/wp-content/uploads/2025/10/order-block-chart.jpg" alt="Liquidity & Order Blocks" loading="lazy">
+                </div>
             </div>
-            <div class="lesson">
-                <h3>Support & Resistance</h3>
-                <p>Static levels + Dynamic (trendlines). Add BOS, CHOCH, FVG, Imbalance for advanced analysis.</p>
-                <img src="https://via.placeholder.com/300x200?text=S+R" alt="Support Resistance">
+            <div class="lesson" onclick="toggleDetails('c3')">
+                <h3 id="l3-title">Support/Resistance + BOS + CHOCH</h3>
+                <div id="c3" class="details">
+                    <p id="l3-desc">Static levels + Dynamic (trendlines). BOS = Break of Structure (continuation). CHOCH = Change of Character (reversal).</p>
+                    <img src="https://www.luxalgo.com/blog/wp-content/uploads/2025/02/liquidity-zones-order-blocks.jpg" alt="S/R BOS CHOCH" loading="lazy">
+                </div>
+            </div>
+            <div class="lesson" onclick="toggleDetails('c4')">
+                <h3 id="l4-title">FVG & Imbalance</h3>
+                <div id="c4" class="details">
+                    <p id="l4-desc">Fair Value Gap: 3-candle imbalance to be filled. Imbalance: Price skipped areas for future retracement.</p>
+                    <img src="https://www.tradingview.com/chart/BTCUSD/TwGf2kqg-Fair-Value-Gaps-FVGs-A-Complete-Guide/fvg-chart.jpg" alt="FVG Imbalance" loading="lazy">
+                </div>
             </div>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: alatbeali22@gmail.com</p>
-            <p>Telegram: @SMC_FVG</p>
+        <section id="contact" class="contact">
+            <h2 id="contact-title">Contact Us</h2>
+            <p id="contact-desc">Ready to start? Message me now!</p>
+            <a id="contact-wa" href="https://wa.me/380XXXXXXXXX" class="btn-wa">WhatsApp Chat</a>
+            <p id="contact-info">Email: <a href="mailto:alatbeali22@gmail.com" style="color: #00ff00;">alatbeali22@gmail.com</a><br>
+            Telegram: <a href="https://t.me/SMC_FVG" style="color: #00ff00;">@SMC_FVG</a></p>
         </section>
     </main>
     <script>
         function setLang(lang) {
             document.documentElement.lang = lang;
-            if (lang === 'ar') document.body.dir = 'rtl'; else document.body.dir = 'ltr';
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            // Update texts (simple for now, can expand)
+            const texts = {
+                en: { title: 'Ali Trader', hero: 'Your Trusted Source...', desc: 'Master Forex...', about: 'About Ali Trader', lessons: 'Lessons' },
+                ru: { title: 'Али Трейдер', hero: 'Ваш надежный источник...', desc: 'Освойте Forex...', about: 'О Али Трейдере', lessons: 'Уроки' },
+                ar: { title: 'علي تريدر', hero: 'مصدرك الموثوق...', desc: 'أتقن الفوركس...', about: 'عن علي تريدر', lessons: 'الدروس' }
+            };
+            document.querySelector('h1').textContent = texts[lang].title;
+            // Add more updates as needed
+        }
+        function toggleDetails(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </body>
